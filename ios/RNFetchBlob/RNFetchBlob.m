@@ -171,7 +171,7 @@ RCT_EXPORT_METHOD(createFile:(NSString *)path
     }
 
     if ([fm fileExistsAtPath:path]) {
-        reject(@"EEXIST", [NSString stringWithFormat:@"File '%@' already exists", path], nil);
+        // reject(@"EEXIST", [NSString stringWithFormat:@"File '%@' already exists", path], nil);
     }
     else {
         BOOL success = [fm createFileAtPath:path contents:fileContent attributes:NULL];

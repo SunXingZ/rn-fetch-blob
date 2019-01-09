@@ -924,8 +924,8 @@ class RNFetchBlobFS {
                 ostream.close();
             } else {
                 if (!created) {
-                    promise.reject("EEXIST", "File `" + path + "` already exists");
-                    return;
+                    // promise.reject("EEXIST", "File `" + path + "` already exists");
+                    // return;
                 }
                 OutputStream ostream = new FileOutputStream(dest);
                 ostream.write(RNFetchBlobFS.stringToBytes(data, encoding));
